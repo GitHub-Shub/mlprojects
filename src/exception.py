@@ -20,6 +20,6 @@ class CustomException(Exception):
 if __name__=="__main__":
     try:
         a=1/0
-    except:
+    except Exception as e:
         logging.info("Division by zero")
-        raise CustomException
+        raise CustomException(e,sys)
